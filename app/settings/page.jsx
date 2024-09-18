@@ -38,7 +38,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="font-dns">
     <Navbar/>
     <div className="settings-container h-screen">
       <aside>
@@ -51,56 +51,69 @@ function App() {
       </aside>
 
       <main>
-        <h2>Account Settings</h2>
+        <h2 className="text-[#2B3674] font-bold text-[34px]">Account Settings</h2>
         <form onSubmit={handleSubmit} className="form">
-          <div className="profile-picture">
-            <label htmlFor="profilePicture">Upload your photo</label>
-            <input type="file" id="profilePicture" onChange={handleFileChange} />
+          <div className="profile-picture ">
+            <label htmlFor="profilePicture" className="w-48 h-24 content-center">Upload your profile picture</label>
+            <input type="file" id="profilePicture" className="bg-[#E0E4EC]" onChange={handleFileChange} />
           </div>
 
-          <div className="input-group">
-            <label>Full Name</label>
+          <div className="w-[513px] font-medium">
+<div className="input-group">
+            <label className="font-medium">Full Name</label>
             <input
               type="text"
               name="fullName"
               value={formData.fullName}
               onChange={handleInputChange}
               placeholder="Please enter your full name"
+              className="bg-[#E0E4EC]"
             />
           </div>
 
           <div className="input-group">
-            <label>Email</label>
+            <label className="mt-4 font-medium">Email</label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleInputChange}
               placeholder="Please enter your email"
+              className="bg-[#E0E4EC]"
+              
             />
           </div>
+          </div>
 
-          <div className="input-group">
-            <label>New Password</label>
+          <div className="w-[513px] ">
+<div className="input-group">
+            <label className="font-medium">New Password</label>
             <input
               type="password"
               name="password"
               value={formData.password}
               onChange={handleInputChange}
               placeholder="Please enter your new password"
+              className="bg-[#E0E4EC]"
             />
           </div>
 
           <div className="input-group">
-            <label>Phone Number</label>
+            <label className="mt-4 font-medium">Phone Number</label>
             <input
               type="tel"
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              placeholder="+1 Please enter your phone number"
+              placeholder="+91 Please enter your phone number"
+              className="bg-[#E0E4EC]"
             />
           </div>
+          </div>
+
+          
+
+          
 
           <div className="buttons">
             <button type="submit" className="update-button">Update Profile</button>
