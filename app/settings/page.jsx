@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import "./App.css";
+import Navbar from "../components/Navbar";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -37,7 +38,9 @@ function App() {
   };
 
   return (
-    <div className="settings-container">
+    <div>
+    <Navbar/>
+    <div className="settings-container h-screen">
       <aside>
         <h2>Settings</h2>
         <ul>
@@ -105,6 +108,7 @@ function App() {
           </div>
         </form>
       </main>
+    </div>
     </div>
   );
 }
